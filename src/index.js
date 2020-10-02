@@ -1,43 +1,36 @@
-function max() {
-    if (arguments.length===0){
-        console.log(0)
-        return
+function max(arr) {
+    if (arr.length===0){
+        return 0
     }
-   var x=arguments[0];
-   for (var i = 1; i < arguments.length; ++i) {
-       if (x<arguments[i]) {
-           x=arguments[i];
+   var x=arr[0];
+   for (var i = 1; i < arr.length; ++i) {
+       if (x<arr[i]) {
+           x=arr[i];
        }
     }
-   console.log(x);
+   return x;
 }
 
-function min() {
-    if (arguments.length===0){
-        console.log(0)
-        return
+function min(arr) {
+    if (arr.length===0){
+        return 0
     }
-    var x = arguments[0];
-    for (var i = 1; i < arguments.length; ++i) {
-        if (x > arguments[i]) {
-            x = arguments[i];
+    var x = arr[0];
+    for (var i = 1; i < arr.length; ++i) {
+        if (x > arr[i]) {
+            x = arr[i];
         }
     }
-    console.log(x);
+    return x ;
 }
 
-function avg() {
-    if (arguments.length===0){
-        console.log(0)
-        return
+function arr() {
+    if (arr.length===0){
+        return 0
     }
     var x = 0;
-    for (var i = 0; i < arguments.length; ++i) {
-        x=x+arguments[i];
+    for (var i = 0; i < arr.length; ++i) {
+        x=x+arr[i];
     }
-    console.log(x/arguments.length);
+    return x/arr.length;
 }
-
-min(-1, 2, 3, 55, -16, 4)
-max(4, 8, 55, 1)
-
